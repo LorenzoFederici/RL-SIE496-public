@@ -2,11 +2,6 @@ import gymnasium as gym
 import envs
 from stable_baselines3 import DQN, A2C, PPO
 import torch as th
-import ale_py
-from utils.custom_policies import CustomCNN
-from stable_baselines3.common.env_util import make_atari_env
-from stable_baselines3.common.vec_env import VecFrameStack
-gym.register_envs(ale_py)
 
 # Envronment name
 # env_name = 'CartPole-v1'
