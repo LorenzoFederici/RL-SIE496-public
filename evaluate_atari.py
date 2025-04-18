@@ -9,7 +9,7 @@ gym.register_envs(ale_py)
 env_name = 'ALE/Breakout-v5'
 
 # Create environment
-env = make_atari_env(env_name, env_kwargs={"render_mode": "human"})
+env = make_atari_env(env_name, seed=50, env_kwargs={"render_mode": "human"})
 env = VecFrameStack(env, n_stack=4) # Stack 4 frames
 
 # Load the trained agent
@@ -17,9 +17,9 @@ log = "trained_models/" + env_name + "/"
 model = PPO.load(log + "model-ppo")
 
 # Reset the environment to generate the first observation
-n_steps = 10000
 observation = env.reset()
-for _ in range(n_steps):
+done = False
+while not done:
     # The trained policy predicts the action, given the observation
     action, _ = model.predict(observation, deterministic=True)
 
@@ -29,9 +29,5 @@ for _ in range(n_steps):
 
     # Render the environment
     env.render()
-
-    # If the episode has ended then we can reset to start a new episode
-    if done:
-        observation = env.reset()
-
+    
 env.close()
