@@ -13,7 +13,16 @@ The software runs on Linux (Ubuntu), macOS, and Windows (through Windows Subsyst
     sudo apt-get upgrade
     sudo apt-get install python3-dev build-essential
     ```
-2. After installing [Anaconda](https://www.anaconda.com/distribution/), you can create a virtual environment, named rl-env, with a specific Python version (3.10 and upper) by using conda:
+
+2. Install [Anaconda](https://www.anaconda.com/distribution/) on Linux via command line with the command:
+    ```bash
+    wget https://repo.anaconda.com/archive/Anaconda3-2024.10-1-Linux-x86_64.sh
+    chmod +x Anaconda3-2024.10-1-Linux-x86_64.sh
+    ./Anaconda3-2024.10-1-Linux-x86_64.sh
+    ```
+    Then, press enter until the installation process starts.
+
+3. Now, use conda to create a virtual environment, named rl-env, with a specific Python version (3.10 and upper) by using conda:
     ```bash
     conda create -n rl-env python=3.10
     ```
