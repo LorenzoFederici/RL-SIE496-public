@@ -6,8 +6,11 @@ import pygame
 # This is a simple grid world environment where an agent, 
 # starting from a random location, has to reach a target,
 # also randomly placed in the grid. The agent can move in
-# four directions: right, up, left, and down. The episode
-# ends when the agent reaches the target. The reward is 1.
+# four directions: right, up, left, and down. The agent receives
+# a reward of -1 for each step taken and +10 for reaching
+# the target. The environment is considered terminated when
+# the agent reaches the target or when the maximum number
+# of steps is reached.
 class GridWorldEnv(gym.Env):
 
     metadata = {"render_modes": ["human", "rgb_array"], "render_fps": 4}
