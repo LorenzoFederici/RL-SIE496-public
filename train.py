@@ -4,11 +4,11 @@ from stable_baselines3 import DQN, A2C, PPO
 import torch as th
 
 # Envronment name
+env_name = 'GridWorld-v0'
 # env_name = 'CartPole-v1'
 # env_name = 'Pendulum-v1'
 # env_name = 'LunarLander-v3'
 # env_name = 'Pusher-v5'
-env_name = 'GridWorld-v0'
 
 # Create environment
 env = gym.make(env_name)

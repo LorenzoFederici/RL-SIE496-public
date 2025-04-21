@@ -4,11 +4,11 @@ from stable_baselines3 import DQN, A2C, PPO
 from stable_baselines3.common.evaluation import evaluate_policy
 
 # Envronment name
+env_name = 'GridWorld-v0'
 # env_name = 'CartPole-v1'
 # env_name = 'Pendulum-v1'
 # env_name = 'LunarLander-v3'
 # env_name = 'Pusher-v5'
-env_name = 'GridWorld-v0'
 
 # Create environment
 env = gym.make(env_name, render_mode="human")
