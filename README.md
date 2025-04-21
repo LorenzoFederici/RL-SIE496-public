@@ -1,6 +1,6 @@
 # REINFORCEMENT LEARNING FOR ROBOT CONTROL
 
-This repository is meant for the students of Prof. Fabio Curti's Robotic Systems class (SIE 456/556), spring 2025, at the Systems & Industrial Engineering Department of the University of Arizona.
+This repository is meant for the students of Prof. Fabio Curti's Robotic Systems class (SIE 496/596), spring 2025, at the Systems & Industrial Engineering Department of the University of Arizona.
 The aim of this repository is to show how to formulate your robot control problem as a Reinforcement Learning (RL) environment (i.e., Markov decision process) by exploiting the OpenAI [Gymnasium](https://gymnasium.farama.org/) Python library, and how to train a neural network to solve this problem via an RL algorithm using the [Stable-Baselines3](https://stable-baselines3.readthedocs.io/en/master/guide/quickstart.html) Python library.
 
 ## INSTALLATION
